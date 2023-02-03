@@ -49,7 +49,7 @@ const questions = [
     {
         // might replace with 'confirm' as the type first /////////////////////////////////////////////////////////////////
         type: 'input',
-        message: 'Has anyone else contributed to this project?',
+        message: 'Who has contributed to this project? (If multiple, seperate with commas and spaces):',
         name: 'contributing',
         validate: validationStation,
     },

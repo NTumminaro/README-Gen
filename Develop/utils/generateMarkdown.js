@@ -18,6 +18,7 @@ function renderLicenseBadge(license) {
 
     case "GNU General Public License v3.0":
       licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      break;
 
     default:
       licenseBadge = "";
@@ -42,16 +43,43 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license !== "I will not be using a license") {
-    licenseSection = `## license
-    
-    this is where the license information will go
-    
-    `
-  } else {
-    licenseSection = "";
-  };
+  switch(license) {
 
+    case "MIT License": 
+      licenseSection = `## license
+    
+    This project is licensed under the MIT license. Feel free to edit and distribute this template as you like.
+  
+    See LICENSE for more information.
+      
+    `;
+      break;
+
+    case "Apache License v2.0":
+      licenseSection = `## license
+    
+    This project is licensed under the Apache License v2.0. Feel free to edit and distribute this template as you like.
+  
+    See LICENSE for more information.
+      
+    `;
+      break;
+
+    case "GNU General Public License v3.0":
+      licenseSection = `## license
+    
+    This project is licensed under the GNU General Public License v3.0. Feel free to edit and distribute this template as you like.
+  
+    See LICENSE for more information.
+      
+    `;
+      break;
+
+    default:
+      licenseSection = "";
+      break;
+
+  };
 };
 
 // TODO: Create a function to generate markdown for README
